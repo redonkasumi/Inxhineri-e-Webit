@@ -1,0 +1,145 @@
+
+main{
+    background-attachment: fixed;
+    background-image: url('../images/background/rose-303848_960_720.png'),
+    url('../images/background/free-simple-backgrounds-1.jpg') ;
+    background-position: center;
+    background-size: 600px, cover;
+    background-repeat: no-repeat;
+    background-origin: inherit;
+    width: 100%;
+    height: 100%;
+  }
+    @supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
+      main{
+        -webkit-backdrop-filter: blur(2em);
+        backdrop-filter: blur(2em);
+      }
+    }
+    
+    .content{
+      background-color: rgba(139, 199, 248, 0.733);
+    }
+  .blog {
+      margin: 0 9em;
+      overflow: hidden;
+    }
+  
+  .mostVisited{
+      margin: 1em 0.5em;
+      padding: 0.3em;
+      font-size: large;
+      width: fit-content;
+      color: #E2494C;
+      background-color: #efe6e6;
+      display: inline-block;
+      border: 0.5px dotted lightgray;
+  }
+  
+  
+  .blog .list{
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+  .blog .list ol{
+    list-style-type: 1;
+    list-style-position: inside;
+    list-style: none; counter-reset: li
+  }
+  
+  .blog .list ol li{
+    font-size: 18px;
+    color: rgb(0, 89, 255);
+    font-weight: bold;
+    counter-increment: li;
+  }
+  
+  
+  .blog .list ol li::before{
+    content: counter(li);
+    color: rgba(24, 33, 83, 0.61);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em
+  }
+  .blog .container-all{
+      width: fit-content;
+      margin: 20px auto;
+      height: auto;
+    }
+   .container-all .container{
+      width: calc(33% - 6px);
+      overflow:hidden;
+      height: fit-content;
+      margin:3px;
+      padding: 0;
+      display:block;
+      position:relative;
+      float:left;
+    }
+   .container > img{
+      height: 400px;
+      transition-duration: .3s;
+      display:block;
+      overflow:hidden;
+      cursor:pointer;
+    }
+  .title{
+      position:absolute;
+      display:block;
+      cursor:pointer;
+      top: 50%;
+      display: none;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      font-size: 1.6em;
+      text-shadow: 1px 5px 10px black;
+      transition-duration: .3s;
+    }
+  
+    .container:hover img{
+      transform: scale(1.2);
+      transition-duration: .3s;
+      filter: grayscale(50%);
+      opacity: .7;
+    }
+    .container:hover span{
+      color:white;
+      display: block;
+      transition-duration: .3s;
+    }
+    
+  #animation{
+    font-size: 6em;
+    text-align: center;
+    color: #E2494C;
+    font-weight: bold;
+    animation: bounceIn 2s, lineThrough 1s 3s forwards;
+  }
+  
+  #animation:hover{
+      color: white;
+      text-shadow: 0 0 50px #E2494C;
+  }
+  
+  #wikipedia{
+    margin: auto;
+    width: 75%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  #history{
+    column-count: 3;
+    column-gap: 1.5em;
+    column-rule-style: solid;
+    column-rule-width: 0.5px;
+    column-rule-color: lightslategray;
+    column-width: 150px;
+  }
+  
+  
