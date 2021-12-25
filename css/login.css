@@ -1,0 +1,57 @@
+.content-form form input[type=text], input[type=password] {
+    width: 100%;
+    height:40px;
+    padding-left: 0.7em;
+    margin: 0.35em;
+}
+
+.content-form{
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color:white;
+    border-radius: 5px;
+    border-width: thick;
+    border: 5px solid gray;
+}
+
+.content-form .form-title{
+    text-align: center;
+}
+
+.content-form form div{
+    margin-bottom: 10px;
+}
+
+.content-form form div label{
+    font-size: 18px;
+    padding: 0;
+    margin-left: 6px;
+}
+
+.content-form form button{
+    background-color: #E2494C;
+    border: none;
+    border-radius: 7px;
+    color: #E7FFFD;
+    font-size: 0.8em;
+    text-decoration: none;
+    cursor: pointer;
+    width: 33.3%;
+    height:40px;
+    margin:0 5px;
+}
+
+.content-form form button:hover{
+    background-color: rgb(228, 116, 118);
+    transition: 0.5s;
+}
+
+p{
+    font-weight: lighter;
+    font-size: 15px;
+    text-align: right;
+}
+ 
