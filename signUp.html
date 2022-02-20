@@ -4,14 +4,18 @@
 <head>
     <title>Sign Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta url="userController.php">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/signUp.css">
     <script type="text/javascript" src="js/signUp.js"></script>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
 </head>
 
 <body>
+    <!-- HEADER -->
     <header>
         <div class="navigation">
             <nav>
@@ -29,61 +33,66 @@
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html" target="_self">ABOUT</a></li>
                     <li><a href="blog.html" target="_self">BLOG</a></li>
-                    <li><a class="login" href="logIn.html" target="_self">LOG IN</a></li>
+
+                    <li><a href="loginPage.php" target="_self">LOG IN</a></li>
 
                 </ul>
             </nav>
         </div>
     </header>
+    <!-- //HEADER -->
 
-
+    <!-- CONTENT -->
     <div class="content-form">
-        <form action="index.html" method="post" onsubmit="return checkMatching(this)" id="myForm" name="myForm">
+        <form action="./php/userController.php" method="POST" id="myForm" name="save">
+            <!-- onsubmit="return checkMatching(this)" -->
             <h2 class="form-title">Sign Up</h2>
 
             <div>
                 <label>Email:</label>
-                <input type="email" name="email" class="required" required>
+                <input type="text" name="email" class="required" required>
             </div>
             <div>
                 <label>Username:</label>
-                <input type="text" name="username" class="required" required>
+                <input type="text" name="emri" class="required" required>
+                <keygen name="key" autofocus form="myForm" keytype="rsa">
             </div>
             <div>
-
+                <!-- Use regex for password validation -->
                 <label>Password:</label>
-                <input type="password" id="password" name="password1" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$"
-                    class="required" required>
+                <input type="password" id="password" name="password" class="required" required>
                 <span toggle="#password" class="fa fa=fw fa eye field-icon toggle-password"></span>
-                <p style="font-size: 12px; text-align: left; padding-left: 1em; color: #ff442a;">Your password must
+                <p style="font-size: 12px; text-align: left; padding-left: 1em; color: #ff442a;"> Your password must
                     contain 8-20 characters (at least one upper case letter, one lower case letter and one number).</p>
             </div>
-            <div>
+            <!-- <div>
                 <label>Confirm Password:</label>
-                <input type="password" name="password2" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$"
+                <input type="password" name="password2"
                     class="required" required>
-            </div>
+            </div> -->
             <div>
                 <label>Gender:</label>
                 <div class="gender">
                     <label>M</label>
-                    <input type="radio" name="gender" required>
+                    <input type="radio" name="gender" required value="M">
                     <label>F</label>
-                    <input type="radio" name="gender">
+                    <input type="radio" name="gender" value="F">
                     <label> Other</label>
-                    <input type="radio" name="gender">
+                    <input type="radio" name="gender" value="O">
                 </div>
             </div>
 
-            <input type="checkbox" name="terms" id="terms" style="margin: 0em 0 1.25em 0.4em;">
-            <label style="font-size: small;">I Agree Terms &amp; Coditions!</label>
 
             <div>
-                <button type="submit" name="logIn-btn" class="logIn-btn">Sign Up</button>
+                <button type="submit" name="save">Sign Up</button>
             </div>
             <p>Already have an account, <a href="logIn.html">Log In</a> </p>
         </form>
     </div>
+
+    <!-- <script src="js/header.js"></script> -->
+    <!-- <script src="js/newyork.js"></script> -->
+
 </body>
 
 </html>

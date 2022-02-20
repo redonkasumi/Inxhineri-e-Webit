@@ -1,4 +1,18 @@
-.content-form form input[type=text], input[type=password], input[type=email] {
+/* Log in style */
+
+/* body{
+    background-color:#cfb3b3;
+    width: 100%;
+} */
+/* .content{
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    position: relative;
+    bottom: 0;
+} */
+.content-form form input[type=text], input[type=password] {
     width: 100%;
     height:40px;
     padding-left: 0.7em;
@@ -14,8 +28,6 @@
     border-width: thick;
     border: 5px solid gray;
 }
-
-
 
 .content-form .form-title{
     text-align: center;
@@ -44,14 +56,6 @@
     margin:0 5px;
 }
 
-/* .gender input[type=radio]{
-    display: block;
-}*/
-
-.gender{
-    padding-left: 1em;
-} 
-
 .content-form form button:hover{
     background-color: rgb(228, 116, 118);
     transition: 0.5s;
@@ -63,28 +67,40 @@ p{
     text-align: right;
 }
 
-/* fa fa-eye icon */
-.field-icon {
-    float: right;
-    margin-left: -30px;
-    margin-top: -25px;
-    position: relative;
-    z-index: 2;
-  }
-
-.error{
-    border:1px solid red;
+#ratings{
+    padding-left: 0.7em;
+    margin-right: 0.35em;
+    font-size: 16px;
 }
 
-#android{
-    padding: 2px 1px 1px 9px;
+#tabel1{
+    table-layout: fixed;
+    width: 100%;
+    margin-right: 0.35em;
 }
 
-#notRobot,#notRobot2{
-    width: 70px;
-    height: 70px;
-    border: 1px solid gray;
-    display: inline-block;
-    margin: 10px 0 0 10px;
+#tabel1 td{
+    width: 33%;
+    text-align: end;
+}
+ 
+
+input[type=range]{
+    /* width: 150px; */
+    /* padding-left: 5px; */
+    margin: 10px;
+    /* text-align: center; */
+    
+}
+.table1 td label{
+    margin: 10px;
 }
 
+.align-text{
+    text-align: left;
+}
+
+
+.rate-btn{
+    padding: 5px;
+}

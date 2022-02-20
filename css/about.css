@@ -1,4 +1,4 @@
-
+/* ABOUT page style */
 header{
     position: relative;
     top: 0;
@@ -42,17 +42,33 @@ div ul li h3{
 }
 
 table{
+ 
+    /* margin-right: 5em; */
+   
     width: 100%;
     table-layout: fixed;
     display: table; 
+    /* scroll not working bcs display block needed */
+    /*overflow-y: scroll;*/
     border-collapse: collapse;
 }
 
+/* thead, tbody{
+    display: block;
+} */
+
+/* tbody{
+    display: block; 
+    overflow-y: scroll;
+    height: 100%;
+    overflow-x: auto;
+} */
 
 table thead th{
     background-color: rgb(2, 24, 49);
     color: white;
-    padding: 1em;
+    padding: 1em;/*same as cellspacing*/
+    /* border-spacing: 5em;  not working properly */
     text-align: center;
 }
 
@@ -80,6 +96,10 @@ table tbody tr:hover {
     background-color: rgb(168, 42, 42);
 }
 
+/* 
+table tbody tr td:first-child:hover{
+    background-color:rgb(168, 42, 42);
+} */
 .table{
 	 height: 400px;
      margin: auto;
@@ -116,4 +136,25 @@ table tbody tr:hover {
 
 #rating tr td:nth-child(2){
     text-align: left;
+}
+
+progress::-webkit-progress-value{
+    background: yellow;
+    border-radius: 7px;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: yellow;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
+
+#pdf{
+    margin:3em 0em 0em 42em;
+}
+#pdf input[type=button]{
+    width: 250px;
+    height: 50px;
+    font-size: 15px;
+    color: navy;
 }

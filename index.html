@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/homePage.css">
 
+    <!-- <script src="js/nightMode.js"></script> -->
+    <script src="js/script.js"></script>
+
 </head>
 
 <body>
+    <!-- HEADER -->
     <header>
         <div class="navigation">
             <nav>
@@ -28,7 +32,7 @@
                     <li><a href="#">HOME</a></li>
                     <li><a href="about.html" target="_self">ABOUT</a></li>
                     <li><a href="blog.html" target="_self">BLOG</a></li>
-                    <li><a class="login" href="login.html" target="_self">LOG IN</a></li>
+                    <li><a class="login" href="loginPage.php" target="_self">LOG IN</a></li>
 
                 </ul>
             </nav>
@@ -36,11 +40,19 @@
     </header>
 
 
+    <!-- BODY -->
+
     <p class="centered-text-style">
         “ It is not the destination where you end up but the mishaps and memories you create along the way „ ~ Penelope
         Riley
     </p>
+    <!-- Slider 1 -->
+    <!-- <section id="slider"> -->
     <div class="slider" style="position: relative; margin: auto; width: 75%;" id="slider">
+        <!-- Slideshow container -->
+        <!-- <div class="slideshow-container"> -->
+
+        <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
             <img src="images/slideshow/JF7_101564.jpg" alt="Visitors enjoying the sunset" style="width:100%">
         </div>
@@ -68,6 +80,7 @@
     </div>
     <br>
 
+    <!-- The dots/circles -->
     <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
@@ -75,6 +88,7 @@
         <span class="dot" onclick="currentSlide(4)"></span>
         <span class="dot" onclick="currentSlide(5)"></span>
         <span class="dot" onclick="currentSlide(6)"></span>
+        <!-- </div> -->
     </div>
 
     <article>
@@ -85,7 +99,9 @@
                 <h3 id="title1"></h3>
                 <p id="title_text1"></p>
                 <details class="reddetails">
-                    <summary><a class="article" href="#">Read more</summary>
+                    <summary><a class="article"
+                            href="https://www.bublup.com/go/travel/?gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyK-Tc4TcCkCWCXvjdn4VkljsKLULuB1auja3yYF9_ncUV1kddog8ZwaAoHzEALw_wcB">Read
+                            more</summary>
                 </details>
             </div>
             <div>
@@ -93,7 +109,8 @@
                 <h3 id="title2"></h3>
                 <p id="title_text2"></p>
                 <details class="reddetails">
-                    <summary><a class="article" href="#">Read more</summary>
+                    <summary><a class="article"
+                            href="https://cultureisking.net/home/backpackers-guide-to-switzerland">Read more</summary>
                 </details>
             </div>
             <div>
@@ -101,7 +118,9 @@
                 <h3 id="title3"></h3>
                 <p id="title_text3"></p>
                 <details class="reddetails">
-                    <summary><a class="article" href="#">Read more</summary>
+                    <summary><a class="article"
+                            href="https://www.globalcitizenyear.org/?utm_source=google&utm_medium=grant&utm_campaign=NonBrandGeneral&utm_content=places%20to%20travel&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyJRwTzzExsongzw8YNKR__2M_yzZvv4-KCpc82uMk3k2GcLUCpjBUcaAsAeEALw_wcB">Read
+                            more</summary>
                 </details>
             </div>
 
@@ -171,13 +190,16 @@
 
 
 
+
+    <!-- footer -->
     <footer>
         <div class="footer">
             <div class="footer-content">
                 <div class="footer-section blog">
                     <h2>Latest From The Blog</h2>
                     <a href="blog.html" target="_blank">
-                        <img src="images/cities/thailand.jpg" alt="Thailand landscape" width="110px" height="110px">
+                        <img src="images/cities/Thailand-Wat-Arun-Buddhist-temple-in-Bangkok-Yai-district-of-Bangkok-Wallpaper-Hd-For-Desktop-Mobile-And-Tablet-3840x2400-915x515.jpg"
+                            alt="Thailand landscape" width="110px" height="110px">
                         <h4>Thailand - the most visited country</h4>
                         <p><span style="overflow-x: auto;">Due to researches made by statistical results Bangkok,
                                 Thailand is one of the most visited cities of 2019. People chose to go there because of
@@ -225,6 +247,7 @@
                     </form>
                 </div>
             </div>
+            <!-- <hr> -->
             <div class="footer-bottom">
                 <p id="copy">Copyright &copy; 2019 - All rights reserved</p>
                 <p id="template">Travel Company</p>
@@ -232,17 +255,34 @@
 
         </div>
 
+        <!-- <audio id="audio1" controls>
+            <source id="audio2" src="audio/Haydn_Cello_Concerto_D-1.mp3" type="audio/mpeg">
+            </audio> -->
+
 
 
 
 
     </footer>
+    <!-- //footer -->
 
 
+    <!-- Carousel -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script src="js/slider.js"></script>
+    <!-- Script -->
+    <script src="js/script.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
+    <script src="js/header.js"></script>
+
+    <!-- <script type="text/javascript" src="js/signUp.js"></script> -->
     <script type="text/javascript">
+
+        // var num = 5.56789;
+        // var n = num.toExponential();
 
         function Person(first, last, desc) {
             this.firstname = first;
@@ -296,6 +336,17 @@
         document.getElementById("title_text2").innerHTML = t_text2.titleTextVal;
         document.getElementById("title_text3").innerHTML = t_text3.titleTextVal;
 
+        try {
+            document.getElementById("demo").innerHTML = localStorage.getItem("pass_word");
+
+            if (document.getElementById("demo") == "") throw "is Empty";
+            if (isNaN(document.getElementById("demo"))) throw "not a number";
+            if (document.getElementById("demo") == "null") throw "is Null";
+            if (document.getElementById("demo") == undefined) throw "undefined";
+        }
+        catch (e) {
+            console.warn("Error thrown:\n" + e + " !")
+        }
 
     </script>
 
