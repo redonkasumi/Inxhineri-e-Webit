@@ -1,0 +1,90 @@
+.content-form form input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    height:40px;
+    padding-left: 0.7em;
+    margin: 0.35em;
+}
+
+.content-form{
+    width: 30%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color:white;
+    border-radius: 5px;
+    border-width: thick;
+    border: 5px solid gray;
+}
+
+
+
+.content-form .form-title{
+    text-align: center;
+}
+
+.content-form form div{
+    margin-bottom: 10px;
+}
+
+.content-form form div label{
+    font-size: 18px;
+    padding: 0;
+    margin-left: 6px;
+}
+
+.content-form form button{
+    background-color: #E2494C;
+    border: none;
+    border-radius: 7px;
+    color: #E7FFFD;
+    font-size: 0.8em;
+    text-decoration: none;
+    cursor: pointer;
+    width: 33.3%;
+    height:40px;
+    margin:0 5px;
+}
+
+/* .gender input[type=radio]{
+    display: block;
+}*/
+
+.gender{
+    padding-left: 1em;
+} 
+
+.content-form form button:hover{
+    background-color: rgb(228, 116, 118);
+    transition: 0.5s;
+}
+
+p{
+    font-weight: lighter;
+    font-size: 15px;
+    text-align: right;
+}
+
+/* fa fa-eye icon */
+.field-icon {
+    float: right;
+    margin-left: -30px;
+    margin-top: -25px;
+    position: relative;
+    z-index: 2;
+  }
+
+.error{
+    border:1px solid red;
+}
+
+#android{
+    padding: 2px 1px 1px 9px;
+}
+
+#notRobot,#notRobot2{
+    width: 70px;
+    height: 70px;
+    border: 1px solid gray;
+    display: inline-block;
+    margin: 10px 0 0 10px;
+}
+

@@ -1,0 +1,113 @@
+/* Media Queries */
+@media only screen and (max-width: 900px) {
+    header .navigation{
+        width: 100%;
+        height: 100px;
+    }
+    header nav{
+        padding: 1em 5em;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }    
+}
+
+@media only screen and (max-width: 1370px) {
+    header .navigation{
+        width: 100%;
+        height: 100px;
+    }
+    header nav{
+        padding: 10px 20px;
+        width: 100%;
+    }    
+
+    header ul{
+        position: absolute;
+        top: 100px;
+        left: 0px;
+        width: 100%;
+        height: 250px;
+        z-index: 1;
+        margin-left: 0px;
+        border-radius:0px;
+        display: none;
+    }
+    header ul li{
+        display: block;
+        padding: 10px;
+    }
+    header a{
+        text-decoration: none;
+        color:white;
+        padding: 5em 0em;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: small;
+    }
+    
+    header .menu-toggle{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        font-size: 1.5em;
+    }
+
+
+    
+    .footer{
+        margin: 0.5em 1em;
+    }
+}
+
+/* FOOTER Media Query */
+@media only screen and (max-width: 960px){
+    footer{
+        height: 1040px;
+    }
+    footer .footer-content{
+        height: 1000px;
+        width: 100%;
+        background-color: #E2E2E2;
+        display: block;
+    }
+
+    footer .footer-content .blog{
+        padding: 20px 0 0 20px;
+    }
+
+    footer .footer-content .contact-form{
+        padding: 20px 40px;
+    }
+
+    footer div.footer-bottom{
+        font-size: 0.7em;
+        height: 50px;
+        width: 100%;
+        margin-top: 4px;
+        position: relative;
+        top: 0px;
+        bottom: 0px;
+        background-color: #E2E2E2;
+        padding-top: 30px;
+        border-top: 1px solid rgb(184, 182, 182);
+        border-top-style: ridge;
+    }
+
+
+}
+
+
+
+
+/*Blog*/
+  @media only screen and (max-width: 900px) {
+      .blog .container {
+          width: calc(50% - 6px);
+      }
+  }
+  @media only screen and (max-width: 400px) {
+      .blog .container {
+          width: 100%;
+      }
+  }

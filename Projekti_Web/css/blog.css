@@ -1,0 +1,307 @@
+/* BLOG PAGE */
+main{
+  background-attachment: fixed;
+  background-image: url('../images/background/rose-303848_960_720.png'),
+  url('../images/background/free-simple-backgrounds-1.jpg') ;
+  background-position: center;
+  background-size: 600px, cover;
+  background-repeat: no-repeat;
+  background-origin: inherit;
+  width: 100%;
+  height: 100%;
+  /* backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0.3;
+  z-index: -2; */
+  /* filter: blur(10px); */
+}
+  @supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
+    main{
+      /* background-color: rgba(255, 255, 255, .5); */
+      -webkit-backdrop-filter: blur(2em);
+      backdrop-filter: blur(2em);
+    }
+  }
+
+  .content{
+    /* opacity: 1;
+    z-index: 3; */
+    background-color: rgba(139, 199, 248, 0.733);
+  }
+.blog {
+    margin: 0 9em;
+    overflow: hidden;
+  }
+
+.mostVisited{
+    margin: 1em 0.5em;
+    padding: 0.3em;
+    font-size: large;
+    width: fit-content;
+    color: #E2494C;
+    background-color: #efe6e6;
+    display: inline-block;
+    border: 0.5px dotted lightgray;
+}
+
+
+.blog .list{
+  margin-left: 3em;
+  margin-right: 3em;
+}
+.blog .list ol{
+  list-style-type: 1;
+  list-style-position: inside;
+  list-style: none; counter-reset: li
+}
+
+.blog .list ol li{
+  font-size: 18px;
+  color: rgb(0, 89, 255);
+  font-weight: bold;
+  counter-increment: li;
+}
+
+
+.blog .list ol li::before{
+  content: counter(li);
+  color: rgba(24, 33, 83, 0.61);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em
+}
+.blog .container-all{
+    width: fit-content;
+    margin: 20px auto;
+    height: auto;
+  }
+ .container-all .container{
+    width: calc(33% - 6px);
+    overflow:hidden;
+    height: fit-content;
+    margin:3px;
+    padding: 0;
+    display:block;
+    position:relative;
+    float:left;
+  }
+ .container > img{
+    /* width: 100%; */
+    height: 400px;
+    transition-duration: .3s;
+    /* max-width: 100%; */
+    display:block;
+    overflow:hidden;
+    cursor:pointer;
+  }
+.title{
+    position:absolute;
+    display:block;
+    cursor:pointer;
+    top: 50%;
+    display: none;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 1.6em;
+    text-shadow: 1px 5px 10px black;
+    transition-duration: .3s;
+  }
+
+  .container:hover img{
+    transform: scale(1.2);
+    transition-duration: .3s;
+    filter: grayscale(50%);
+    opacity: .7;
+  }
+  .container:hover span{
+    color:white;
+    display: block;
+    transition-duration: .3s;
+  }
+
+  /* Creating an animation */
+
+#animation{
+  font-size: 6em;
+  text-align: center;
+  color: #E2494C;
+  font-weight: bold;
+  animation: bounceIn 2s, lineThrough 1s 3s forwards;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+#animation:hover{
+    color: white;
+    text-shadow: 0 0 50px #E2494C;
+}
+
+@keyframes bounceIn{
+  0% { 
+      transform: scale(0.1);
+      opacity: 0;
+  }
+  60%{
+      transform: scale(1.2);
+      opacity: 1;
+  }
+  100%{
+      transform: scale(1);
+  }
+}
+
+@-webkit-keyframes bounceIn{
+  0% { 
+      transform: scale(0.1);
+      opacity: 0;
+  }
+  60%{
+      transform: scale(1.2);
+      opacity: 1;
+  }
+  100%{
+      transform: scale(1);
+  }
+}
+
+
+
+/* LineThrough animation// */
+/* 
+@keyframes lineThrough{
+  0%{}
+  100%{text-decoration: line-through;}
+}
+@-webkit-keyframes lineThrough{
+  0%{}
+  100%{text-decoration: line-through;}
+} */
+
+
+#myCanvas{
+  margin:2em 0 2em 0em;
+}
+
+#canvas{
+  height: 300px;
+  width: 400px;
+
+}
+
+.game{
+  text-align: center;
+}
+.game p{
+  font-size: 30px;
+  font-style: italic;
+  color: #2A3A8B;
+  display: inline-block;
+}
+.game #play{
+  height: 40px;
+  width: 200px;
+  border-radius: 10px;
+  font-size: 25px;
+  background-color: rgba(42, 58, 139, 0.39);
+  color: #2A3A8B;
+  margin-left: 7px;
+  padding:3px;
+}
+
+.game #play:hover{
+  background-color: rgba(24, 33, 83, 0.61);
+}
+
+.game #play:active{
+  background-color: rgba(117, 123, 161, 0.61);
+  color: rgb(4, 102, 4);
+}
+
+
+#wikipedia{
+  margin: auto;
+  width: 75%;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: medium;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#history{
+  column-count: 3;
+  column-gap: 1.5em;
+  column-rule-style: solid;
+  column-rule-width: 0.5px;
+  column-rule-color: lightslategray;
+  column-width: 150px;
+}
+
+.animated{
+  height: 100px;
+  width: 100px;
+   background-image: url(../images/emoji-4584568_960_720.png);
+   background-repeat: no-repeat;
+   /* background-attachment: fixed; */
+   background-size: 100px;
+   margin-left: 10em;
+
+   animation-name: anim2;
+   animation-duration: 10s; 
+   /* how long */
+   animation-delay: 5s;  
+   /* when to start */
+   animation-iteration-count: 1; 
+   /* how many times */
+   animation-direction: normal;
+   animation-timing-function: linear;
+   /* same speed from start to end  */
+   animation-fill-mode: forwards;
+   /* no change before or after animation starts */
+}
+
+@keyframes anim2{
+   10%{
+     transform: rotate(360deg);
+     transition-delay: 2s;
+     -webkit-transform: rotate(360deg);
+     -webkit-transition-delay: 2s;
+   }
+   20%{
+       transform: translateX(300px) ;
+      -webkit-transform: translateX(300px);
+   }
+   40%{
+     transform: skewX(45deg);
+     -webkit-transform: skewX(45deg);
+   }
+   50%{
+     transform: skew(0deg);
+     -webkit-transform: skew(0deg);
+   }
+   80%{
+     transform: rotateY(40deg);
+     -webkit-transform: rotateY(40deg);
+   }
+   99%{
+     transform: scale(1.2);
+     -webkit-transform: scale(1.2);
+   }
+   100%{
+    background-image: url(../images/collision-emoji.png);
+   }
+
+}
+
+#resize{
+  font-size: medium;
+  color: rgba(236, 236, 18, 0.822);
+  padding:15px;
+  padding-left: 50px;
+  width: 300px;
+  resize: horizontal;
+  overflow: auto;
+  outline: 1px inset rgba(196, 196, 103, 0.473);
+  outline-offset: 2px;
+  margin: auto;
+}

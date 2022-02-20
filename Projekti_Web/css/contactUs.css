@@ -1,0 +1,123 @@
+/* Log in style */
+
+/* body{
+    background-color:#cfb3b3;
+    width: 100%;
+} */
+/* .content{
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    position: relative;
+    bottom: 0;
+} */
+.content-form form input[type=text], input[type=email], input[type=message] {
+    width: 100%;
+    height:40px;
+    padding-left: 0.7em;
+    margin: 0.35em;
+}
+
+picture img {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 500px;
+    z-index: 0;
+  } 
+  
+
+.content-form{
+    width: 30%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color:white;
+    border-radius: 5px;
+    border-width: thick;
+    border: 5px solid gray;
+}
+
+.content-form .form-title{
+    text-align: center;
+}
+
+.content-form form div{
+    margin-bottom: 10px;
+}
+
+.content-form form div label{
+    font-size: 18px;
+    padding: 0;
+    margin-left: 6px;
+}
+
+.content-form form button{
+    background-color: #E2494C;
+    border: none;
+    border-radius: 7px;
+    color: #E7FFFD;
+    font-size: 0.8em;
+    text-decoration: none;
+    cursor: pointer;
+    width: 33.3%;
+    height:40px;
+    margin:0 5px;
+}
+
+.content-form form button:hover{
+    background-color: rgb(228, 116, 118);
+    transition: 0.5s;
+}
+
+p{
+    font-weight: lighter;
+    font-size: 15px;
+    text-align: right;
+}
+
+#ratings{
+    padding-left: 0.7em;
+    margin-right: 0.35em;
+    font-size: 16px;
+}
+
+#tabel1{
+    table-layout: fixed;
+    width: 100%;
+    margin-right: 0.35em;
+}
+
+#tabel1 td{
+    width: 33%;
+    text-align: end;
+}
+ 
+
+input[type=range]{
+    /* width: 150px; */
+    /* padding-left: 5px; */
+    margin: 10px;
+    /* text-align: center; */
+    
+}
+
+textarea[type=range]{
+    /* width: 150px; */
+    /* padding-left: 5px; */
+    margin: 20px;
+    /* text-align: center; */
+    
+}
+.table1 td label{
+    margin: 10px;
+}
+
+.align-text{
+    text-align: left;
+}
+
+
+.rate-btn{
+    padding: 5px;
+}
