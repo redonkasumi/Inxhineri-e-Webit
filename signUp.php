@@ -1,5 +1,5 @@
 <?php
-    require_once('php/user.php');
+    require_once('sephp/ur.php');
     if (isset($_POST['save'])){
     $regj= new User();
     $regj->setEmri($_POST['emri']);
