@@ -64,12 +64,56 @@ public function setId($id){
         $stm=$this->dbconn->prepare($sql);
         $stm->execute([$this->id,$this->emri,$this->email,$this->password,$this->gender,$this->userType]);
         echo "<script>
-        alert('dhenat jane REGJISTRUAR me sukses');
+        alert('te dhenat jane regjistruar me sukses');
         document.location='index.html';
         </script>";
         }catch (PDOException $pdoe) {
             echo $pdoe->getMessage();
             }
     }
+
+    public function lexoDhenat(){
+        $sql='SELECT * FROM user';
+        $stm=$this->dbconn->prepare($sql);
+        $stm->execute();
+        $rezultati =$stm->fetchAll(PDO::FETCH_ASSOC);
+        return $rezultati;
+    }
+
+
+    public function lexoDhenatSipasIDs($id){
+            $sql='SELECT * FROM user where ID=:id';
+            $stm=$this->dbconn->prepare($sql);
+            $stm->execute([':id'=>$this->id=$id]);
+            $rezultati =$stm->fetch(PDO::FETCH_ASSOC);
+            return $rezultati;
+    }
+
+    public function updateDhenat(){
+        $sql='UPDATE user SET name=?, email=?, gender=?, usertype = ? where ID=?';
+        $stm=$this->dbconn->prepare($sql);
+        $stm->execute([$this->emri, $this->email,$this->gender,$this->userType, $this->id]);
+    }
+
+    public function deleteDhenat($id){
+        $sql='DELETE FROM user WHERE ID=:id';
+        $stm=$this->dbconn->prepare($sql);
+        $stm->bindParam(':id',$id);
+        $stm->execute();
+        if ($stm==true){
+        echo "<script>
+        alert('te dhenat jane fshire me sukses');
+        document.location='userListAdmin.php';
+        </script>";
+        }
+        else {
+        return false;
+        }
+        }
+    
+        
+
+            
+        
 }
 ?>

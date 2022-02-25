@@ -90,7 +90,7 @@ public function setId($id){
             if ($stm==true){
                 echo "<script>
                 alert('te dhenat jane fshire me sukses');
-                document.location='userListAdmin.php';
+                document.location='contactUsMessages.php';
                 </script>";
             }
                 else {

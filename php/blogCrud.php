@@ -1,10 +1,11 @@
 <?php
 require_once('connection.php');
-class Home extends dbConnect {
+class Blog extends dbConnect {
 private $id;
 private $title;
 private $description;
 protected $dbconn;
+
 public function __construct($id='', $title='',
 $description='')
 {
@@ -30,64 +31,66 @@ public function setId($id){
     $this->description=$description;
     }
     public function getDescription(){
-        return $this->description;
-        }
-  
+    $this->description;
+    }
+ 
 
-        public function insertoDhenat(){
-            try{
-            $sql="INSERT INTO homepage (ID,title,description) VALUES (?,?,?)";
-            $stm=$this->dbconn->prepare($sql);
-            $stm->execute([$this->id,$this->title,$this->description]);
-            echo "<script>
-            alert('te dhenat jane regjistruar me sukses');
-            document.location='indexAdmin.php';
-            </script>";
-            }catch (PDOException $pdoe) {
-                echo $pdoe->getMessage();
-                }
-        }
+    public function insertoDhenat(){
+        try{
+        $sql="INSERT INTO blog (ID,title,description)
+        VALUES (?,?,?)";
+        $stm=$this->dbconn->prepare($sql);
+        $stm->execute([$this->id,$this->title,$this->description]);
+        echo "<script>
+        alert('te dhenat jane regjistruar me sukses');
+        document.location='blog.php';
+        </script>";
+        }catch (PDOException $pdoe) {
+            echo $pdoe->getMessage();
+            }
+    }
 
     public function lexoDhenat(){
-        $sql='SELECT * FROM homepage';
+        $sql='SELECT * FROM blog';
         $stm=$this->dbconn->prepare($sql);
         $stm->execute();
         $rezultati =$stm->fetchAll(PDO::FETCH_ASSOC);
         return $rezultati;
-
     }
-    
 
 
     public function lexoDhenatSipasIDs($id){
-            $sql='SELECT * FROM homepage where ID=:id';
+            $sql='SELECT * FROM blog where ID=:id';
             $stm=$this->dbconn->prepare($sql);
             $stm->execute([':id'=>$this->id=$id]);
-            $rezultati =array($stm->fetch(PDO::FETCH_ASSOC));
+            $rezultati =$stm->fetch(PDO::FETCH_ASSOC);
             return $rezultati;
     }
 
     public function updateDhenat(){
-        $sql='UPDATE homepage SET title=?, description=? where ID=?';
+        $sql='UPDATE blog SET title=?, description=? where ID=?';
         $stm=$this->dbconn->prepare($sql);
         $stm->execute([$this->title, $this->description]);
     }
 
     public function deleteDhenat($id){
-        $sql='DELETE FROM homepage WHERE ID=:id';
+        $sql='DELETE FROM blog WHERE ID=:id';
         $stm=$this->dbconn->prepare($sql);
         $stm->bindParam(':id',$id);
         $stm->execute();
-            if ($stm==true){
-                echo "<script>
-                alert('te dhenat jane fshire me sukses');
-                document.location='userListAdmin.php';
-                </script>";
-            }
-                else {
-                    return false;
-                }
-    }
+        if ($stm==true){
+        echo "<script>
+        alert('te dhenat jane fshire me sukses');
+        document.location='blog.php';
+        </script>";
+        }
+        else {
+        return false;
+        }
+        }
+    
+        
+
             
         
 }
