@@ -4,7 +4,7 @@
 <head>
     <title>Sign Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta url="userController.php">
+    <meta url="signUp.php">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/signUp.css">
@@ -44,13 +44,13 @@
 
     <!-- CONTENT -->
     <div class="content-form">
-        <form action="./php/userController.php" method="POST" id="myForm" name="save">
+        <form action="signUp.php" method="POST" id="myForm" name="save">
             <!-- onsubmit="return checkMatching(this)" -->
             <h2 class="form-title">Sign Up</h2>
 
             <div>
                 <label>Email:</label>
-                <input type="text" name="email" class="required" required>
+                <input type="email" name="email" class="required" required>
             </div>
             <div>
                 <label>Username:</label>
@@ -60,7 +60,8 @@
             <div>
                 <!-- Use regex for password validation -->
                 <label>Password:</label>
-                <input type="password" id="password" name="password" class="required" required>
+                <input type="password" id="password" name="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$"
+                    class="required" required>
                 <span toggle="#password" class="fa fa=fw fa eye field-icon toggle-password"></span>
                 <p style="font-size: 12px; text-align: left; padding-left: 1em; color: #ff442a;"> Your password must
                     contain 8-20 characters (at least one upper case letter, one lower case letter and one number).</p>
@@ -86,7 +87,7 @@
             <div>
                 <button type="submit" name="save">Sign Up</button>
             </div>
-            <p>Already have an account, <a href="logIn.html">Log In</a> </p>
+            <p>Already have an account, <a href="loginPage.php">Log In</a> </p>
         </form>
     </div>
 

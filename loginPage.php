@@ -1,6 +1,7 @@
+
 <?php
 
-$host="localhost";
+$host="localhost:3306";
 $user="root";
 $password="";
 $db="projektiweb";
@@ -32,19 +33,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 	{	
 
 		$_SESSION["username"]=$username;
-
-		header("location:indexUser.html");
+		header("location:index.php");
 	}
 	elseif($row["usertype"]=="admin")
 	{
 
 		$_SESSION["username"]=$username;
 		
-		header("location:adminhome.php");
-	}
-	else
-	{
-		echo "username or password incorrect";
+		header("location:indexAdmin.php");
 	}
 }
 
@@ -94,7 +90,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
     <!-- CONTENT -->
     <div class="content-form">
-        <form action="#" method="post">
+        <form action="#" method="post"  onsubmit="return validate(this)">
             <h2 class="form-title">Log In</h2>
             <div>
                 <label>Username:</label>
@@ -113,7 +109,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         </form>
         <br>
     </div>
-    <script src="js/header.js"></script>
 </body>
 
 </html>

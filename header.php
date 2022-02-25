@@ -12,18 +12,18 @@
                 </div>
                 <i class="fa fa-bars menu-toggle"></i>
                 <ul>
-                    <li><a href="index.php">HOME</a></li>
-                    <li><a href="about.html" target="_self">ABOUT</a></li>
-                    <li><a href="blog.html" target="_self">BLOG</a></li>
-                    <li> <?php
-                         
-                          if(isset($_COOKIE["type4"] )){  
-                             
-                             echo("<a href='logout.php' target='_self' > LOG OUT");
-                           }
-                           else{
-                               echo("<a href='loginPage.php' target='_self' > LOG IN");
-                           }?></a></li>
+                    <li><a href="indexAdmin.php">HOME</a></li>
+                    <li><a href="about.php" target="_self">ABOUT</a></li>
+                    <li><a href="blog.php" target="_self">BLOG</a></li>
+                    <li><a href="destination.php" target="_self">DESTINATIONS</a></li>
+                    <li><a href="contactUs.php" target="_self">CONTACT US</a></li>
+                    <li><a href="loginPage.php?logout=1"><b>LOGOUT</b><a></button></li>
+	                <?php
+	                if(isset($_GET['logout'])){
+	                session_unset();
+                	session_destroy();
+	                }
+                        ?>
 
                 </ul>
             </nav>

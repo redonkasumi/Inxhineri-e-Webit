@@ -1,5 +1,5 @@
 <?php
-    require_once('sephp/ur.php');
+    require_once('php/user.php');
     if (isset($_POST['save'])){
     $regj= new User();
     $regj->setEmri($_POST['emri']);
@@ -57,13 +57,13 @@
 
     <!-- CONTENT -->
     <div class="content-form">
-        <form action="" method="POST" id="myForm" name="myForm">
+        <form action="" method="POST" id="myForm"  onsubmit="return checkMatching(this)" name="myForm">
             <!-- onsubmit="return checkMatching(this)" -->
             <h2 class="form-title">Sign Up</h2>
 
             <div>
                 <label>Email:</label>
-                <input type="text" name="email" class="required" required>
+                <input type="email" name="email" class="required" required>
             </div>
             <div>
                 <label>Usertype:</label>
@@ -72,27 +72,26 @@
             <div>
                 <label>Username:</label>
                 <input type="text" name="emri" class="required" required>
-                <keygen name="key" autofocus form="myForm" keytype="rsa">
             </div>
             <div>
                 <!-- Use regex for password validation -->
                 <label>Password:</label>
-                <input type="password" id="password" name="password"  
+                <input type="password" id="password" name="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$" 
                     class="required" required>
                 <span toggle="#password" class="fa fa=fw fa eye field-icon toggle-password"></span>
                 <p style="font-size: 12px; text-align: left; padding-left: 1em; color: #ff442a;"> Your password must
                     contain 8-20 characters (at least one upper case letter, one lower case letter and one number).</p>
             </div>
-            <!-- <div>
+            <div>
                 <label>Confirm Password:</label>
-                <input type="password" name="password2"
+                <input type="password" id="password2" name="password2" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$"
                     class="required" required>
-            </div> -->
+            </div>
             <div>
                 <label>Gender:</label>
                 <div class="gender">
                     <label>M</label>
-                    <input type="radio" name="gender" required value="M">
+                    <input type="radio" name="gender"  value="M">
                     <label>F</label>
                     <input type="radio" name="gender" value="F">
                     <label> Other</label>
@@ -101,34 +100,13 @@
             </div>
             
 
-            <!-- <div>
-                <h6 style="margin-left: 0.8em; color: #A5C736;">If you're not a robot, please drag the android into the
-                    box.</h6>
-
-                <div id="notRobot" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)"
-                    ondragover="return dragOver(event)"></div>
-
-                
-
-                <div id="notRobot2" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)"
-                    ondragover="return dragOver(event)">
-                    <img src="images/872px-Android_robot.svg.png" alt="Andorid logo" id="android" draggable="true"
-                    ondragstart="return dragStart(event)" height="60px" /></div>
-
-            </div> -->
-
-            <!-- <input type="checkbox" name="terms" id="terms" style="margin: 0em 0 1.25em 0.4em;">
-            <label style="font-size: small;">I Agree Terms &amp; Coditions!</label> -->
-
             <div>
                 <button type="submit" name="save">Sign Up</button>
             </div>
             <p>Already have an account, <a href="logIn.html">Log In</a> </p>
         </form>
+        
     </div>
-
-    <!-- <script src="js/header.js"></script> -->
-    <!-- <script src="js/newyork.js"></script> -->
 
 </body>
 

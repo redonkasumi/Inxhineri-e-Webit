@@ -13,31 +13,8 @@
 
 <body>
     <!-- HEADER -->
-    <header>
-        <div class="navigation">
-            <nav>
-                <div class="header-text">
-                    <span class="composition-text">
-                        Travel
-                    </span>
+    <?php include('header.php');?>
 
-                    <span class="left-text">
-                        Dare to live outside your box!
-                    </span>
-                </div>
-                <i class="fa fa-bars menu-toggle"></i>
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="about.html" target="_self">ABOUT</a></li>
-                    <li><a href="blog.html" target="_self">BLOG</a></li>
-                    <li><a href="destination.html" target="_self">DESTINATION</a></li>
-                    <li><a href="contactUs.html" target="_self">CONTACT US</a></li>
-                    <li><a class="login" href="logIn.html" target="_self">LOG IN</a></li>
-
-                </ul>
-            </nav>
-        </div>
-    </header>
     <!-- //HEADER -->
 
 
