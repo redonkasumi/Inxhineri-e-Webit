@@ -1,3 +1,9 @@
+<?php include_once('php/blogCrud.php');
+$dhenat=new Blog();
+$all=$dhenat->lexoDhenat();
+?>
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,31 +51,22 @@
                 <div class="list">
 
                     <ol>
-                        <li>Bangkok
+                        <li><?php echo $all[0]['title']?>
                             <dl style="color: rgb(94, 105, 160); margin-left: 1em;">
-                                <dt>Thailand’s capital</dt>
-                                <dd>Is a large city known for ornate shrines and vibrant street
-                                    life. The boat-filled Chao Phraya River feeds its network of canals, flowing past
-                                    the
-                                    Rattanakosin royal district, home to opulent Grand Palace and its sacred Wat Phra
-                                    Kaew
-                                    Temple.</dd>
+                                <dt><?php echo $all[0]['description']?></dt>
+                                
                             </dl>
                         </li>
-                        <li>Paris, France</li>
-                        <li>London, England</li>
-                        <li>Dubai, UAE
+                        <li><?php echo $all[1]['title']?></li>
+                        <li><?php echo $all[2]['title']?></li>
+                        <li><?php echo $all[3]['title']?>
                             <dl style="color: rgb(94, 105, 160); margin-left: 1em;">
-                                <dt>The capital of the Emirate of Dubai</dt>
-                                <dl>Located in the eastern part of the Arabian Peninsula on the coast of the Persian
-                                    Gulf, Dubai
-                                    aims to be the business hub of Western Asia.It is also a major global transport hub
-                                    for
-                                    passengers and cargo.</dl>
+                                <dt><?php echo $all[3]['description']?></dt>
+                                
                             </dl>
                         </li>
-                        <li>Singapore, Malaysia</li>
-                        <li>Kuala Lumpur</li>
+                        <li><?php echo $all[4]['title']?></li>
+                        <li><?php echo $all[5]['title']?></li>
                     </ol>
                 </div>
 
@@ -106,29 +103,8 @@
 
 
             <div id="wikipedia">
-                <h3 style="color: lightslategray;margin-bottom: 1em;">Travel History</h3>
-                <p id="history">The origin of the word "travel" is most likely lost to history. The term "travel" may
-                    originate
-                    from the Old
-                    French word travail, which means 'work'. According to the Merriam Webster dictionary, the first
-                    known use
-                    of the word travel was in the 14th century. It also states that the word comes from Middle English
-                    travailen, travelen (which means to torment, labor, strive, journey) and earlier from Old French
-                    travailler
-                    (which means to work strenuously, toil). In English we still occasionally use the words "travail",
-                    which
-                    means struggle. According to Simon Winchester in his book The Best Travelers' Tales (2004), the
-                    words
-                    "travel" and "travail" both share an even more ancient root: a Roman instrument of torture called
-                    the
-                    tripalium (in Latin it means "three stakes", as in to impale). This link may reflect the extreme
-                    difficulty
-                    of travel in ancient times. Travel in modern times may or may not be much easier depending upon the
-                    destination. Travel to Mount Everest, the Amazon rainforest, extreme tourism, and adventure travel
-                    are more
-                    difficult forms of travel. Travel can also be more difficult depending on the method of travel, such
-                    as by
-                    bus, cruise ship, or even by bullock cart.</p>
+                <h3 style="color: lightslategray;margin-bottom: 1em;"><?php echo $all[6]['title']?></h3>
+                <p id="history"><?php echo $all[6]['description']?></p>
             </div>
 
 
@@ -138,7 +114,7 @@
             </div>
         </div>
     </main>
-
+</body>
     <!-- footer -->
     <footer>
         <div class="footer">
@@ -208,13 +184,5 @@
         </div>
     </footer>
     <!-- //footer -->
-
-    <script src="js/header.js"></script>
-    <script src="js/newyork.js"></script>
-
-
-
-
-</body>
 
 </html>

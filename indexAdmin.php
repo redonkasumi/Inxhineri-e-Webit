@@ -25,10 +25,6 @@
     <link rel="stylesheet" href="css/homePage.css">
 	<link rel="stylesheet" href="css/indexAdmin.css">
 
-
-    <!-- <script src="js/nightMode.js"></script> -->
-    <script src="js/script.js"></script>
-
 </head>
 
 <body>
@@ -65,6 +61,8 @@
 					<div class="vertical-menu">
 					<a href="#" class="active">Dashboard</a>
 					<a href="userListAdmin.php">User list</a>
+                    <a href="contactUsMessages.php">Messages</a>
+
 					
 
                 </ul>
@@ -82,12 +80,8 @@
         Riley
     </p>
     <!-- Slider 1 -->
-    <!-- <section id="slider"> -->
     <div class="slider" style="position: relative; margin: auto; width: 75%;" id="slider">
-        <!-- Slideshow container -->
-        <!-- <div class="slideshow-container"> -->
 
-        <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
             <img src="images/slideshow/JF7_101564.jpg" alt="Visitors enjoying the sunset" style="width:100%">
         </div>
@@ -126,109 +120,91 @@
         <span class="dot" onclick="currentSlide(6)"></span>
         <!-- </div> -->
     </div>
-    <article>
-    <form action="" method="POST" id="myForm" name="myForm">
-        <section class="players">
-            <h4 style="top:13px" class="redbox">OUR PLAYERS</h4>
-
-            <figure>
-            <img src="images/world-icon.PNG" alt="icon" width="30" height="30">
-                <figcaption>
-                <button type="submit" name="save">+</button>
-                <div>
+<article>
+<section class="services">
+            <h4 class="redbox">OUR SERVICES</h4>
+    <div class="content-form">
+        <form action="" method="POST" id="myForm" name="myForm">
+            <div>
                 <label>Title:</label>
-                <input type="text" name="title" class="required" required>
+                <input type="text" name="title" class="required">
             </div>
             <div>
-                <label>Description: </label>
-                <input type="text" name="description" class="required" required>
+                <label>Description:</label>
+                <input type="text" name="description" class="required">
             </div>
+            <div>
+                <button type="submit" name="save">+</button>
+            </div>
+        </form>
         
-                        <h4><span id="" style="font-weight: lighter;"><?php echo $all[17]['title']?></span></h4>
-                        <p id="title_text1"><?php echo $all[17]['description']?></p>
-                        <summary><a class="article"
+    </div>
+    <img src="images/world-icon.PNG" alt="icon" width="30" height="30">
+            <h3 id="title1"><?php echo $all[5]['title']?></h3>
+            <p id="title_text1"><?php echo $all[5]['description']?></p>
+                <details class="reddetails">
+                    <summary><a class="article"
                             href="https://www.bublup.com/go/travel/?gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyK-Tc4TcCkCWCXvjdn4VkljsKLULuB1auja3yYF9_ncUV1kddog8ZwaAoHzEALw_wcB">Read
                             more</a></summary>
+                </details>
+           
+    <div class="content-form">
+        <form action="" method="POST" id="myForm" name="myForm">
+            <div>
+                <label>Title:</label>
+                <input type="text" name="title" class="required">
+            </div>
+            <div>
+                <label>Description:</label>
+                <input type="text" name="description" class="required">
+            </div>
+            <div>
+                <button type="submit" name="save">+</button>
+            </div>
+        </form>
+        
+    </div>
+    <img src="images/persons-icon.PNG" alt="icon" width="30" height="30">
 
-                </figcaption>
-            </figure>
+            <h3 id="title1"><?php echo $all[6]['title']?></h3>
+            <p id="title_text1"><?php echo $all[6]['description']?></p>
+                <details class="reddetails">
+                    <summary><a class="article"
+                            href="https://www.bublup.com/go/travel/?gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyK-Tc4TcCkCWCXvjdn4VkljsKLULuB1auja3yYF9_ncUV1kddog8ZwaAoHzEALw_wcB">Read
+                            more</a></summary>
+                </details>
 
-            <figure>
-                <img src="images/people/people2.jpg" alt="photo" width="175" height="175">
-                <figcaption>
-                    <button type="submit" name="save">+</button>
-                    <div>
-                        <label>Title:</label>
-                        <input type="text" name="title" class="required" >
-                    </div>
-                    <div>
-                        <label>Description:</label>
-                        <input type="text" name="description" class="required" >
-                    </div>
-                    <h4>Name: <span id="name2" style="font-weight: lighter;"><?php echo $all[1]['title']?></span></h4>
-                    <p id="text_person2"><?php echo $all[1]['description']?></p>
-                    <a href="https://www.linkedin.com" class="reddetails">View profile</a>
-                </figcaption>
-            </figure>
+                <div class="content-form">
+        <form action="" method="POST" id="myForm" name="myForm">
+            <div>
+                <label>Title:</label>
+                <input type="text" name="title" class="required">
+            </div>
+            <div>
+                <label>Description:</label>
+                <input type="text" name="description" class="required">
+            </div>
+            <div>
+                <button type="submit" name="save">+</button>
+            </div>
+        </form>
+        
+    </div>
+    <img src="images/settings-icon.PNG" alt="icon" width="30" height="30">
 
-            <figure>
-                <img src="images/people/people3.jpg" alt="photo" width="175" height="175">
-                <figcaption>
-                    <button type="submit" name="save">+</button>
-                    <div>
-                        <label>Title:</label>
-                        <input type="text" name="title" class="required" >
-                    </div>
-                    <div>
-                        <label>Description:</label>
-                        <input type="text" name="description" class="required" >
-                    </div>
-                    <h4>Name: <span id="name3" style="font-weight: lighter;"><?php echo $all[2]['title']?> </span></h4>
-                    <p id="text_person3"><?php echo $all[2]['description']?></p>
-                    <a href="https://www.linkedin.com" class="reddetails">View profile</a>
-                </figcaption>
-            </figure>
-            <?php  ?>
+            <h3 id="title1"><?php echo $all[7]['title']?></h3>
+            <p id="title_text1"><?php echo $all[7]['description']?></p>
+                <details class="reddetails">
+                    <summary><a class="article"
+                            href="https://www.bublup.com/go/travel/?gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyK-Tc4TcCkCWCXvjdn4VkljsKLULuB1auja3yYF9_ncUV1kddog8ZwaAoHzEALw_wcB">Read
+                            more</a></summary>
+                </details>
 
-            <figure>
-                <img src="images/people/people4.jpg" alt="photo" width="175" height="175">
-                <figcaption>
-                    <button type="submit" name="save">+</button>
-                    <div>
-                        <label>Title:</label>
-                        <input type="text" name="title" class="required" >
-                    </div>
-                    <div>
-                        <label>Description:</label>
-                        <input type="text" name="description" class="required" >
-                    </div>
-                    <h4>Name: <span id="name4" style="font-weight: lighter;"><?php echo $all[3]['title']?> </span></h4>
-                    <p id="text_person4"><?php echo $all[3]['description']?></p>
-                    <a href="https://www.linkedin.com" class="reddetails">View profile</a>
-                </figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/people/people5.jpg" alt="photo" width="175" height="175">
-                <figcaption>
-                    <button type="submit" name="save">+</button>
-                    <div>
-                        <label>Title:</label>
-                        <input type="text" name="title" class="required" >
-                    </div>
-                    <div>
-                        <label>Description:</label>
-                        <input type="text" name="description" class="required" >
-                    </div>
-                    <h4>Name: <span id="name5" style="font-weight: lighter;"><?php echo $all[4]['title']?> </span></h4>
-                    <p id="text_person5"><?php echo $all[4]['description']?></p>
-                    <a href="https://www.linkedin.com" class="reddetails">View profile</a>
-                </figcaption>
-            </figure>
+           
             
         </section>
     </form>
-    </article>
+</article>
 
     <?php
 

@@ -1,19 +1,17 @@
 
-function checkMatching2(form){
-	var user=form.username.value;
-	var pass=form.password.value;
-	var localUser=localStorage.getItem("user_name");
-	var localPass=localStorage.getItem("pass_word");
-	var patt = new RegExp(localUser);
 
-
-	if(patt.exec(user)==null||pass!=localPass){
-         alert("Check username/password or sign up");
-         console.warn(" username/password wrong");
+function validate() {
+	var username = document.getElementById("username").value;
+	var password = document.getElementById("password").value;
+	var username2 = form.username.value;
+	var password2 = form.password.value;
+	if (username == username2 && password == password2) {
+		alert("Login successfully");
+		window.location = "index.html"; // Redirecting to other page.
+		return false;
 	}
-	else{
-		 alert("Welcome "+user);
-		  window.location.href ="index.html";
-	    }
+	else {
+		alert("You have left attempt;");
 
+	}
 }
