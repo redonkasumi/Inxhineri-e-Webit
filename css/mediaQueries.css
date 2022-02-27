@@ -1,8 +1,7 @@
 /* Media Queries */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 500px) {
     header .navigation{
-        width: 100%;
-        height: 100px;
+        height: 20rem;
     }
     header nav{
         padding: 1em 5em;

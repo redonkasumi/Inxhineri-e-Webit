@@ -129,6 +129,18 @@ color: #333333;
 padding: 0 4.7em;
 }
 
+@media only screen and (max-width: 970px) {
+    * {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    header {
+      height: 20rem;
+    }
+  
+    
+  }
+
 .slider-holder
 {
     width: 960px;
@@ -376,47 +388,6 @@ footer .footer-content .details ul li a{
     color: #E2494C;
 }
 
-/* footer contact form */
-footer .footer-content .contact-form{
-    padding: 20px 10px;
-}
-footer .footer-content .contact-form input[name="inputType1"] {
-    border: none;
-    width: 85%;
-    border-radius: 7px;
-    height:33px;
-    padding-left: 0.7em;
-    margin: 0.35em;
-}
-
-
- 
-footer .footer-content .contact-form input[type=submit]{
-    background-color: #E2494C;
-    border: none;
-    border-radius: 7px;
-    color: #E7FFFD;
-    font-size: 0.7em;
-    text-decoration: none;
-    cursor: pointer;
-    width: 33.3%;
-    height: 35px;
-    margin-left: 4px;
-}
-footer .footer-content .contact-form input[type=submit]:hover{
-    background-color: rgb(228, 116, 118);
-    transition: 0.5s;
-}
-footer .footer-content .contact-form textarea{
-    border: none;
-    border-radius: 7px;
-    height: 130px;
-    padding: 0.7em 0 0 0.7em;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0.35em;
-    width: 85%;
-    resize: none;
-}
 
 /* footer bottom/copyright */
  footer div.footer-bottom{
