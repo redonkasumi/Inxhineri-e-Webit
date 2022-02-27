@@ -2,7 +2,7 @@
 $dhenat=new Blog();
 $all=$dhenat->lexoDhenat();
 ?>
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -114,7 +114,7 @@ $all=$dhenat->lexoDhenat();
             </div>
         </div>
     </main>
-</body>
+
     <!-- footer -->
     <footer>
         <div class="footer">
@@ -166,15 +166,7 @@ $all=$dhenat->lexoDhenat();
                     </ul>
                 </div>
 
-                <div class="footer-section contact-form">
-                    <h2>Contact Us</h2>
-                    <form action="" method="post" id="contact">
-                        <input type="text" placeholder="Name" name="inputType1"><br>
-                        <input type="email" placeholder="Email" name="inputType1" required><br>
-                        <textarea placeholder="Message"></textarea><br>
-                        <input type="submit" form="contact" value="SUBMIT">
-                    </form>
-                </div>
+                
             </div>
             <!-- <hr> -->
             <div class="footer-bottom">
@@ -184,5 +176,5 @@ $all=$dhenat->lexoDhenat();
         </div>
     </footer>
     <!-- //footer -->
-
+    </body>
 </html>

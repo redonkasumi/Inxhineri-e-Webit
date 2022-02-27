@@ -6,7 +6,6 @@
     $regj->setEmail($_POST['email']);
     $regj->setPassword($_POST['password']);
     $regj->setGender($_POST['gender']);
-    $regj->setUserType($_POST['usertype']);
     $regj->insertoDhenat();
     }
     ?>
@@ -22,8 +21,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/signUp.css">
     <script type="text/javascript" src="js/signUp.js"></script>
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
 </head>
 
@@ -43,9 +40,9 @@
                 </div>
                 <i class="fa fa-bars menu-toggle"></i>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html" target="_self">ABOUT</a></li>
-                    <li><a href="blog.html" target="_self">BLOG</a></li>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="about.php" target="_self">ABOUT</a></li>
+                    <li><a href="blog.php" target="_self">BLOG</a></li>
 
                     <li><a href="loginPage.php" target="_self">LOG IN</a></li>
 
@@ -64,10 +61,6 @@
             <div>
                 <label>Email:</label>
                 <input type="email" name="email" class="required" required>
-            </div>
-            <div>
-                <label>Usertype:</label>
-                <input type="text" name="usertype" class="required" required>
             </div>
             <div>
                 <label>Username:</label>
@@ -103,7 +96,7 @@
             <div>
                 <button type="submit" name="save">Sign Up</button>
             </div>
-            <p>Already have an account, <a href="logIn.html">Log In</a> </p>
+            <p>Already have an account, <a href="logInPage.php">Log In</a> </p>
         </form>
         
     </div>

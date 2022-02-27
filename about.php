@@ -250,10 +250,6 @@
         </ul>
     </div>
 
-
-
-
-    <!-- footer -->
     <footer>
         <div class="footer">
             <div class="footer-content">
@@ -298,25 +294,18 @@
                         <li>Saturday 10:00~16:00</li>
                     </ul>
                 </div>
-
-                <div class="footer-section contact-form">
-                    <h2>Contact Us</h2>
-                    <form action="" method="post" id="contact">
-                        <input type="text" placeholder="Name" name="inputType1"><br>
-                        <input type="email" placeholder="Email" name="inputType1" required><br>
-                        <textarea placeholder="Message"></textarea><br>
-                        <input type="submit" form="contact" value="SUBMIT">
-                    </form>
-                </div>
             </div>
             <!-- <hr> -->
             <div class="footer-bottom">
                 <p id="copy">Copyright &copy; 2022 - All rights reserved</p>
                 <p id="template">Travel Company</p>
             </div>
+
         </div>
+
     </footer>
-    <!-- //footer -->
+
+
 </body>
 
 </html>

@@ -24,22 +24,38 @@ document.location='userListAdmin.php'
 <htm>
     <head>
         <link rel="stylesheet" href ="css/mysingUPstyle.css" />
-            <title>Formulari i Regjistrimit</title>
+        <link rel="stylesheet" href ="css/updateUserAdmin.css" />
+          <link rel="stylesheet" href="css/style.css">
+            <title>Update Form</title>
     </head>
     <body>
-        <div id="formulari">
-            <h3>Perditso te dhenat ne Formular</h3>
+        <div id="content-form">
         <form action='' method="POST">
-            <label>Emri</label>
-                <input type="text" class="inp" name='name' value ='<?php echo $record['name'];?> '/>
-            <label>Email</label>
-            <input type="text" class="inp" name='email' value ='<?php echo $record['email'];?> '/>
-            <label>Gender</label>
-            <input type="text" class="inp" name='gender' value ='<?php echo $record['gender'];?> '/>
-            <label>User Type</label>
-            <input type="text" class="inp" name='usertype' value ='<?php echo $record['usertype'];?>'/>
-                <button name='edit'>RUAJ</button>
+            <h2 class="form-title">Update Data Form</h2>
+            <div>
+                 <label>Name: </label>
+                 <input type="text" class="inp" name='name' value ='<?php echo $record['name'];?> '/>
+            </div>
+            
+            <div>
+                 <label>Email: </label>
+                 <input type="text" class="inp" name='email' value ='<?php echo $record['email'];?> '/>
+            </div>
+            
+            <div>
+                <label>Gender: </label>
+                <input type="text" class="inp" name='gender' value ='<?php echo $record['gender'];?> '/>
+            </div>
+            
+            <div>
+                <label>User Type: </label>
+                <input type="text" class="inp" name='usertype' value ='<?php echo $record['usertype'];?>'/>
+            </div>
+            <div>   
+                <button name='edit'>Save</button>
+            </div>
         </form>
+
         </div>
     </body>
 </htm>
